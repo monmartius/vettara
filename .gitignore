@@ -1,0 +1,13 @@
+node_modules/
+core/
+
+!.gitignore
+!src/
+!webpack.config.js
+!package.json 
+!yarn.lock
+
+public_html/
+
+!public_html/assets/
+
