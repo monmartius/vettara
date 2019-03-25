@@ -28,14 +28,16 @@ let $w = $(window);
 let $headerTopMenu = $('#header-top-menu');
 let $topMenu = $('#top-menu');
 
-console.log($('button', $headerTopMenu).html());
+// console.log($('button', $headerTopMenu).html());
 
-let firstScreenHeight = $w.height(); 
-
-$('html, body').on('click', function(){
+$(document).on('click', function(e){
 
 	if($('.collapse', $headerTopMenu).hasClass('show')){
 		$('.collapse', $headerTopMenu).collapse("hide");
+		// e.stopPropagation();
+
+		console.log('html body click');
+		console.log(e.target);
 	}
 });
 
@@ -99,6 +101,34 @@ $('html, body').on('click', function(){
 
 
 // });
+
+
+
+
+
+
+
+
+
+
+let $dropdown = $('.dropdown', $topMenu);
+
+$topMenu.on('click', function(e){
+
+	// $dropdown.dropdown('toggle');
+	// e.stopPropagation();
+	// event.preventDefault();
+	console.log('e.stopPropagation()');
+	// return false;
+});
+
+
+
+
+
+
+
+
 
 
 

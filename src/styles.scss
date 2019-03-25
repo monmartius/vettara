@@ -1,9 +1,9 @@
 @import "~bootstrap/scss/bootstrap.scss";
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 // * {
 // 	outline: 1px solid red;
 // }
-
-@import url('https://fonts.googleapis.com/css?family=Montserrat');
 body{
 
 	background-color: gray;
@@ -73,7 +73,7 @@ $green: green;
 
 	nav#top-menu{
 
-		margin-top: 10px;
+		padding-top: 10px;
 		background-color: transparent;
 
 		.nav-link, .dropdown{
@@ -90,7 +90,8 @@ $green: green;
 			padding-top: 12px;
 			font-size: 12px;
 			padding-left: 12px;
-			padding-right: 12px;
+            padding-right: 12px;
+			padding-bottom: 12px;
 
 		}
 
@@ -174,7 +175,7 @@ $green: green;
 			left: 50%;
 			transform: translate(-50%);
 			background-color: $blue;
-			bottom: 0px;
+			bottom: 6px;
 			width: 100%;
 			height: 3px;
 			content: " ";
@@ -413,6 +414,7 @@ video.fullscreen-bg__video {
 }
 
 .top-info {
+    opacity: .99;
 	text-align: right;
 	width: 100%;
 	// background-color: $green;
@@ -420,6 +422,7 @@ video.fullscreen-bg__video {
 	position: absolute;
 	top: 0;
 	height: 30px;
+    z-index: -1000;
 
 
 
