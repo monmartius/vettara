@@ -9,7 +9,7 @@ displayInfoBlock.css({
 	width: '100%',
 	color: 'red',
 	'font-size': '30px',
-	top: '30%',
+	bottom: '0',
 	margin: 'auto'
 });
 
