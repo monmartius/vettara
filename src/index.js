@@ -18,7 +18,7 @@ display.out('TEST');
 
 display.cssStyles = {
 
-	'background-color': 'rgba(255, 0, 0, .5)',
+	'background-color': 'rgba(255, 0, 0, .2)',
 	'color': 'white'
 }
 

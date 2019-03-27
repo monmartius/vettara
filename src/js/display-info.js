@@ -8,7 +8,7 @@ displayInfoBlock.css({
 	position: 'fixed',
 	width: '100%',
 	color: 'red',
-	'font-size': '30px',
+	'font-size': '20px',
 	bottom: '0',
 	margin: 'auto'
 });
