@@ -1,0 +1,24 @@
+.fullscreen-background{
+
+	position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+ 	overflow: hidden;
+
+	video, img{
+
+		height: 100vh;
+	}
+	 
+}
+
+.top-info{
+
+	color: $green-color-light;
+}

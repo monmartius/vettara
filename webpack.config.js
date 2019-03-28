@@ -46,7 +46,13 @@ module.exports = {
 						options: {
 							name: '[name].[ext]',
 							outputPath: './images',
-							useRelativePath: true
+							useRelativePath: true,
+							// publicPath: './assets/images'
+							// (url) => { 
+								
+							// 	console.log('>>>>>>>>> url' + url);
+							// 	return ('./assets/images/' + url);
+							// }
 						}
 					},
 					{

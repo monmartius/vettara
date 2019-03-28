@@ -1,0 +1,47 @@
+.fullscreen-background{
+
+	position: absolute;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: -1;
+    height: 100vh;
+    width: 100%;
+ 	overflow: hidden;
+
+	video, img{
+
+		height: 100vh;
+	}
+
+	.overlay {
+
+	    background-color: rgba(0,60,90,.65);
+	    position: absolute;
+	    top:0;
+	    left:0;
+	    overflow: hidden;
+	    width: 100%;
+	    height: 100vh;
+	    z-index: 4;
+	}
+
+}
+
+.top-info {
+    opacity: .99;
+	text-align: right;
+	width: 100%;
+	// background-color: $green;
+	padding-right: 30px;
+	position: absolute;
+	top: 80px;
+	height: 30px;
+    // z-index: 0;
+    color: $green-color;
+    font-weight: bold;
+}
+
+

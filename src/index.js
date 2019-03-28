@@ -14,7 +14,7 @@ function da(msg){
 
 }
 
-display.out('TEST');
+// display.out('TEST');
 
 display.cssStyles = {
 
@@ -40,75 +40,6 @@ $(document).on('click', function(e){
 		console.log(e.target);
 	}
 });
-
-// $(window).on('scroll', function(){
-	
-// 	if($('.collapse', $headerTopMenu).hasClass('show')){
-	
-// 		$('.collapse', $headerTopMenu).collapse("hide");
-// 		$topMenu.removeClass('first-screen-menu-show');
-// 	}
-// });
-
-
-
-// Метод 	Описание 	
-// .collapse(options) 	Активирует складной элемент с опцией. Приведенные выше параметры для допустимых значений 	
-// .collapse("toggle") 	Переключение складного элемента 	
-// .collapse("show") 	Показывает складной элемент 	
-// .collapse("hide") 	Скрывает складной элемент 	
-// .collapse("dispose") 	Уничтожает складной элемент
-
-// show.bs.collapse 	Происходит при отображении складного элемента 	
-// shown.bs.collapse 	Происходит при полном отображении складного элемента (после завершения CSS-переходов) 	
-// hide.bs.collapse 	Происходит при скрытии складного элемента 	
-// hidden.bs.collapse 	Происходит, когда складной элемент полностью скрыт (после завершения CSS-переходов)
-
-
-// $('.collapse', $topMenu).on('show.bs.collapse', function(){
-
-// 	if(!$headerTopMenu.hasClass('on-scroll-prepare')){
-
-// 		$topMenu.addClass('first-screen-menu-show');
-// 	}
-// });
-
-
-// $('.collapse', $topMenu).on('hidden.bs.collapse', function(){
-
-// 	$topMenu.removeClass('first-screen-menu-show');
-// });
-
-// $(window).on('resize', function(){
-	
-// 	$topMenu.removeClass('first-screen-menu-show');
-// 	$('.collapse', $headerTopMenu).collapse("hide");
-
-// 	firstScreenHeight = $w.height()
-// });
-
-
-// $(window).on('scroll', function(){
-
-// 	if($w.scrollTop() >= 30){
-
-// 		$headerTopMenu.addClass('on-scroll');
-// 	}
-// 	else{
-
-// 		$headerTopMenu.removeClass('on-scroll');		
-// 	}
-
-
-// });
-
-
-
-
-
-
-
-
 
 
 let $dropdown = $('.dropdown', $topMenu);
@@ -147,8 +78,7 @@ $('.collapse', $topMenu).on('hidden.bs.collapse', function(){
 
 $(window).on('resize', function(){
 
-	display.out('size: ' + breakPoints.onPoint() + '<br>'+ 	winSize()
-);
+	// display.out('size: ' + breakPoints.onPoint() + '<br>'+ 	winSize());
 });
 
 $(window).on('resize scroll', function(){
