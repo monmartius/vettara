@@ -14,7 +14,7 @@ function da(msg){
 
 }
 
-// display.out('TEST');
+display.out('TEST');
 
 display.cssStyles = {
 
@@ -78,7 +78,7 @@ $('.collapse', $topMenu).on('hidden.bs.collapse', function(){
 
 $(window).on('resize', function(){
 
-	// display.out('size: ' + breakPoints.onPoint() + '<br>'+ 	winSize());
+	display.out('size: ' + breakPoints.onPoint() + '<br>'+ 	winSize());
 });
 
 $(window).on('resize scroll', function(){
