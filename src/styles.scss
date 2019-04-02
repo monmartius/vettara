@@ -7,7 +7,7 @@
 // }
 body{
 
-	background-color: gray;
+
 
 	font-family: Montserrat;
 
@@ -1183,12 +1183,203 @@ $blue-color-dark: blue;
 
 }
 
-section .h2{
+.page-container{
 
-	
+	// text-align: center;
+
+	h2{
+
+		margin-top: 20px;
+		margin-bottom: 20px;
+
+		font-size: 30px;
+		text-align: center;
+
+		@include media-breakpoint-up(md){
+
+			margin-top: 30px;
+			margin-bottom: 30px;
+
+			font-size: 45px;
+		}	
+	}
 }
 
-.ambulance{
+#ambulance, #facts-about-clinic{
+
+	h2, ul{
+		// width: 100%;
+	}
+}
+
+#ambulance{
+
+	// padding: 20px;
 
 
+	ul{
+
+
+
+			outline: 1px solid green;
+
+
+
+		// justify-content: center;
+		display: flex;
+		list-style: none;
+		margin: auto;
+		padding: 0;
+		flex-wrap: wrap;
+		// width: 100%;
+
+		@include media-breakpoint-up(md){
+
+
+		}
+
+		li{
+
+			
+			outline: 1px solid red;
+
+
+			position: relative;
+			margin-top: 10px;
+			margin-bottom: 10px;
+
+
+			
+			// padding-left: 50px;
+
+			display: flex;
+			// flex-grow: 1;
+			flex-shrink: 0;
+			width: 100%;
+			// width: 20px;
+			line-height: 26px;
+			font-size: 20px;
+
+
+
+
+			@include media-breakpoint-up(md){
+
+					width: 50%;
+
+					justify-content: center;
+					align-content: center;
+					align-items: center;
+
+			}
+
+
+
+			div{
+
+				width: calc(100% - 75px);
+			}
+
+			&:before{
+				width: 45px;
+				height: 100%;
+				margin-right: 10px;
+				display: inline-block;
+
+				background-image: url("images/services_icons.png");
+				background-size: 345px;
+				background-position: 8px;
+				content: " ";
+				// display: block;
+				background-repeat: no-repeat;
+			}
+	
+
+		}
+
+
+	}
+
+
+	#diagnostic{
+
+
+		&:before{
+
+
+			background-image: url("images/services_icons.png");
+
+		}
+	}
+	// #traumatology
+	// #vaccination
+	// #dentistry
+	// #therapy
+	// #visual-diagnosis
+
+}
+
+
+
+
+
+
+
+
+
+
+#facts-about-clinic{
+
+	.facts{
+
+		display: flex;
+		justify-content: flex-start;
+
+		flex-wrap: wrap;
+
+		.fact{
+			
+			text-align: center;
+
+			display: flex;
+
+
+			margin: auto;
+			// outline: 1px solid blue;
+			flex-wrap: wrap;
+			width: 60%;
+			max-width: 150px;
+
+
+			margin-bottom: 30px;
+
+
+
+
+		}
+
+		.fact span:nth-child(1){
+			height: 80px;
+			width: 100%;
+			// border: 1px solid $green-color-dark;
+			background-color: $green-color-dark;
+			color: white;
+			font-size: 35px;
+			line-height: 80px;
+			
+		}
+
+		.fact span:nth-child(2){
+
+			width: 100%;
+			font-size: 25px;
+			font-weight: bold;
+		}
+
+		.fact span:nth-child(3){
+
+			width: 100%;
+		}
+
+	}
 }
