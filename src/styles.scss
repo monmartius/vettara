@@ -1189,7 +1189,7 @@ $blue-color-dark: blue;
 
 	h2{
 
-		margin-top: 20px;
+		margin-top: 40px;
 		margin-bottom: 20px;
 
 		font-size: 30px;
@@ -1197,7 +1197,7 @@ $blue-color-dark: blue;
 
 		@include media-breakpoint-up(md){
 
-			margin-top: 30px;
+			margin-top: 60px;
 			margin-bottom: 30px;
 
 			font-size: 45px;
@@ -1221,7 +1221,7 @@ $blue-color-dark: blue;
 
 
 
-			outline: 1px solid green;
+			// outline: 1px solid green;
 
 
 
@@ -1233,15 +1233,23 @@ $blue-color-dark: blue;
 		flex-wrap: wrap;
 		// width: 100%;
 
-		@include media-breakpoint-up(md){
+
+		@media (min-width: 320px){
+
+			// flex-base: 150px;
+			flex-basis: 80%;
+			flex-grow: 0;
+
+			// background-color: green;
 
 
 		}
 
+
 		li{
 
 			
-			outline: 1px solid red;
+			// outline: 1px solid red;
 
 
 			position: relative;
@@ -1259,6 +1267,10 @@ $blue-color-dark: blue;
 			// width: 20px;
 			line-height: 26px;
 			font-size: 20px;
+			align-content: flex-start;
+			align-items: flex-start;
+
+
 
 
 
@@ -1268,8 +1280,7 @@ $blue-color-dark: blue;
 					width: 50%;
 
 					justify-content: center;
-					align-content: center;
-					align-items: center;
+
 
 			}
 
@@ -1278,11 +1289,13 @@ $blue-color-dark: blue;
 			div{
 
 				width: calc(100% - 75px);
+				padding-top: 10px;
 			}
 
 			&:before{
 				width: 45px;
-				height: 100%;
+				// height: 100%;
+				height: 45px;
 				margin-right: 10px;
 				display: inline-block;
 
@@ -1332,8 +1345,15 @@ $blue-color-dark: blue;
 
 	.facts{
 
+
+		width: 80%;
+		margin: auto;
+		margin-top: 30px;
 		display: flex;
-		justify-content: flex-start;
+		// justify-content: flex-start;
+		justify-content: center;
+
+
 
 		flex-wrap: wrap;
 
@@ -1342,9 +1362,12 @@ $blue-color-dark: blue;
 			text-align: center;
 
 			display: flex;
+			justify-content: center;
 
 
 			margin: auto;
+			margin-top: 0;
+			// margin-top: 10px;
 			// outline: 1px solid blue;
 			flex-wrap: wrap;
 			width: 60%;
@@ -1352,6 +1375,11 @@ $blue-color-dark: blue;
 
 
 			margin-bottom: 30px;
+
+			@include media-breakpoint-up(lg){
+
+				margin: 30px;
+			}
 
 
 
@@ -1382,4 +1410,39 @@ $blue-color-dark: blue;
 		}
 
 	}
+}
+
+section#popular-services{
+	
+	background-color: red;
+}
+
+
+#popular-services-slider{
+
+	width: 100%;
+
+
+
+	*{
+		outline: 1px solid red;
+	}
+
+	.popular-services__slider{
+
+		width: 30%;
+		background-color: green;
+		min-height: 400px;
+		
+	}
+	
+	img.popular-services__slider__placeholder{
+
+		width: 100%;
+		height: auto;
+	}
+	// h2{
+	// 	width: 30%;
+	// 	min-height: 100px;
+	// }
 }
