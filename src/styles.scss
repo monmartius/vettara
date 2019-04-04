@@ -1414,25 +1414,60 @@ $blue-color-dark: blue;
 
 section#popular-services{
 	
-	background-color: red;
+	background-color: $green-color-dark;
+	color: white;
+
+	&>div.container-fluid{
+		text-align: center;
+		margin: 0;
+		padding: 0;
+
+		.row{
+
+			margin: 0;
+			padding: 0;
+		}
+	}
+
 }
 
 
 #popular-services-slider{
 
 	width: 100%;
+	padding: 0;
+	margin: 0;
 
 
+	.slick-dots{
+
+		bottom: 25px;
+	}
+
+	.slick-prev.slick-arrow{
+
+		left: 20px;
+		z-index: 10;
+		
+	}
+	.slick-next.slick-arrow{
+
+		right: 20px;
+		z-index: 10;
+
+	}
+
+	
 
 	*{
 		outline: 1px solid red;
 	}
 
-	.popular-services__slider{
+	.popular-services__slide{
 
-		width: 30%;
-		background-color: green;
-		min-height: 400px;
+		// width: 230%;
+		background-color: $green-color-dark;
+		// min-height: 400px;
 		
 	}
 	
