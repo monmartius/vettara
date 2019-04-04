@@ -8,7 +8,7 @@ require('slick-carousel/slick/slick-theme.scss');
 
 
 let breakPoints = require('./js/breakpoints.js');
-breakPoints.init();
+// breakPoints.init();
 
 let display = require('./js/display-info.js');
 let winSize = require('./js/window-size.js');
@@ -100,7 +100,30 @@ $("#popular-services-slider").slick({
         speed: 1500,
         slidesToShow: 1,
         autoplay: true,
-        autoplaySpeed: 1000
+        autoplaySpeed: 4000,
+
+		responsive: [{
+
+			breakpoint: 1900,
+			settings: {
+				slidesToShow: 1,
+				infinite: true
+			}
+
+		}, {
+
+			breakpoint: 600,
+			settings: {
+				slidesToShow: 1,
+				dots: true
+			}
+
+		}, {
+
+			breakpoint: 300,
+			settings: "unslick" // destroys slick
+
+		}]        
 
     });
 

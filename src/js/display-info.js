@@ -26,7 +26,7 @@ displayInfoBlock.setCssStyles = function(){
 
 
 
-$('body').prepend(displayInfoBlock);
+$('body').append(displayInfoBlock);
 
 displayInfoBlock.out = function(msg){
 

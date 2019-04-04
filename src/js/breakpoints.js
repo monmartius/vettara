@@ -256,7 +256,7 @@ $window.on('resize', function(){
 });
 
 
-
+breakPoints.init();
 
 
 module.exports = breakPoints;
