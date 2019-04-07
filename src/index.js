@@ -103,28 +103,28 @@ $("#popular-services-slider").slick({
         autoplay: true,
         autoplaySpeed: 4000,
 
-		responsive: [{
+		// responsive: [{
 
-			breakpoint: 1900,
-			settings: {
-				slidesToShow: 1,
-				infinite: true
-			}
+		// 	breakpoint: 1900,
+		// 	settings: {
+		// 		slidesToShow: 1,
+		// 		infinite: true
+		// 	}
 
-		}, {
+		// }, {
 
-			breakpoint: 600,
-			settings: {
-				slidesToShow: 1,
-				dots: true
-			}
+		// 	breakpoint: 600,
+		// 	settings: {
+		// 		slidesToShow: 1,
+		// 		dots: true
+		// 	}
 
-		}, {
+		// }, {
 
-			breakpoint: 300,
-			settings: "unslick" // destroys slick
+		// 	breakpoint: 300,
+		// 	settings: "unslick" // destroys slick
 
-		}]        
+		// }]        
 
     });
 

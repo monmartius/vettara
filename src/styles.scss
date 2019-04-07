@@ -355,150 +355,97 @@ $blue-color-dark: blue;
 
 
 
-.block-info {
-	order: 3;
-	display: flex;
-	// flex-direction: column;
-	justify-content: center;
-	align-content: flex-start;
-	flex-wrap: wrap;
-	text-align: right;
-	width: 100%;
-	// position: absolute;
-    color: $green-color-light;
-    font-weight: bold;
-	// top: 10px;
-	// bottom: 10px;
- //    right: 0;
-    height: 98px;
-    flex-grow: 0;
-    flex-shrink: 0;
 
-    // *{
-    // 	outline: 1px solid red;
-    // }
+
+
+
+
+
+
+.block-offer{
+	
+	// display: table-cell;
+
+	display: flex;
+	height: 100%;
+	padding-top: 60px;
+	flex-direction: column;
+	justify-content: center;
+	oreder: 1;
+    color: $green-color-light;
+    text-align: center;
+    font-size: 18px;
+    // margin-top: auto;
+    align-content: center;
+    align-items: center;
+
+}
+
+.block-info{
+
+    color: $green-color-light;
+
+    padding-bottom: 10px;
+
+	order: 2;
 
 	.phones{
-		text-align: left;
-		font-size: 12px;
-		line-height: 18px;
 
-		// flex-wrap: wrap;
-		position: absolute;
-		// display: inline-block;
-		left: 16px;
-		right: 50px;
-		bottom: 5px;
-		font-weight: bold;
+		position: relative;
 
-		order: 3;
+		// margin-left: 25px;
+		// padding-left: 25px;
+		padding-top: 10px;
+		text-align: center;
+		padding-left: 15px;
+		padding-right: 15px;
 
 		span{
-			// float: right;
-			width: calc(100% - 40px);
-			margin-left: 20px;
-			display: block;
-			// margin-left: auto;
+
+			font-weight: bold;
+			white-space: nowrap;
+			display: inline-block;
+			padding-right: 5px;
+			
+			&:after{
+				content: ", ";
+			}
+
+			&:last-child:after{
+
+				content: "";
+			}
 		}
 
-		// bottom: 30px;
 
 		&:before{
 			display: inline-block;
-			position: absolute;
-			left: 0;
+			position: relative;
+			top: 5px;
+			// left: 5px;
 			width: 20px;
-			height: 55px;
+			height: 20px;
 
 			background-image: url(images/phone.svg);
 			background-position: 0 50%;
 			background-size: 15px;
 			background-repeat: no-repeat;
 			content: " ";
-		}
+		}		
 	}
 
-	.address{
-		text-align: right;
-		order: 2;
-		font-size: 10px;
-		width: auto;
-		height: 15px;
-		padding-right: 10px;
-		position: relative;
+	.address, .shedule, .social-media{
 
-		font-weight: normal;
-		// display: 
-		padding-left: 15px;
-
-		&:before{
-			left: 0px;
-			position: absolute;
-			width: 15px;
-			height: 15px;		
-			background-image: url(images/geo.svg);
-			background-position: 0 50%;
-			background-size: 10px;
-			background-repeat: no-repeat;
-			content: " ";
-			display: inline-block;
-		}
-
-
-	}
-
-	.shedule{
-		width: auto;
-
-		padding-left: 15px;
-		text-align: right;
-		height: 15px;
-		font-size: 10px;
-		order: 3;	
-		position: relative;
-		font-weight: normal;
-
-		&:before{
-			left: -3px;
-			position: absolute;
-			width: 15px;
-			height: 15px;		
-			background-image: url(images/clock.svg);
-			background-position: 0 50%;
-			background-size: 13px;
-			background-repeat: no-repeat;
-			content: " ";
-
-		}
-	}
-
-	.social-media{
-		position: absolute;
-		bottom: 8px;
-		right: 15px;
-		order: 4;	
-		width: 30px;
-		height: 30px;
-		// text-align: right;
-
-		& a{
-			display: inline-block;
-			width: 30px;
-			height: 30px;
-			// position: absolute;
-			background-image: url(images/vk.svg);
-			background-position: 0 50%;
-			background-size: 30px;
-			background-repeat: no-repeat;
-			// background-color: red;
-		}	
+		display: none;
 	}
 
 
 	.block-clinic-name{
 
-		// display: flex;
-		order: 1;	
+
+		order: 2;	
+		padding-left: 10px;
+		padding-right: 10px;
 		
 
 		line-height: 15px;
@@ -506,7 +453,7 @@ $blue-color-dark: blue;
 
 		// padding-right: 15px;
 		text-align: center;
-		font-size: 11.5px;
+		font-size: 13px;
 		color: white;
 		min-width: 100%;
 		font-weight: normal;
@@ -528,571 +475,139 @@ $blue-color-dark: blue;
 }
 
 
-
-.block-clinic-name{
-
-	// display: flex;
-	flex-direction: column;
-	justify-content: flex-end;
-	color: $green-color-light;
-	order: 2;	
-	flex-basis: 10px;
-	line-height: 15px;
-	// background-color: red;
-	text-align: right;
-	// padding-right: 15px;
-	text-align: center;
-	font-size: 11.5px;
-	color: white;
-	margin-bottom: 5px;
-
-
-	.clinic{
-		display: inline;
-
-	}	
-
-	.name{
-
-		display: inline;
-
-	}
-}
-
-
-.block-offer{
-
-	
-	// outline: 1px solid red;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	margin-top: 60px;
-	// flex-basis: 100%;
-
-	/* height: 100%; */
-	// height: calc(100% - 60px);
-	/* min-height: 100px; */
-
-	// flex-basis: calc(100% - 560px);
-	flex-grow: 1;
-	// flex-shrink: 0;
-
-	color: $green-color-light;
-	order: 1;	
-	text-align: center;
-	// background-color: red;
-	font-size: 20px;
-	padding: 0 15px 0 15px;
-
-}
-
-
-
-
- 
-@media (max-height: 240px - .02px){
-
-	.first-screen{
-	
-		height: calc(100vh + 88px);
-
-		.block-offer{
-
-			height: calc(100vh - 60px);
-		}
-
-		.block-info{
-
-			background-color: $green-color-dark;
-
-			height: 88px;
-		}
-	}
-
-	@media (min-width: 320px){
-
-
-		.block-clinic-name{
-
-			padding-top: 10px;
-
-			.clinic, .name{
-
-				font-size: 20px;
-
-			}
-		}
-
-		.block-info{
-
-			height: 120px;
-		}
-
-		.block-info .phones{
-			
-			order: 4;
-
-			font-size: 15px;
-
-			width: 100%;
-
-			position: relative;
-
-			left: 0;
-			top: 0;
-			text-align: center;
-
-			&:before{
-
-				position: relative;
-				top: 2px;
-				height: 20px;
-				display: inline-block;
-				background-position: 0 6px;
-				display: inline-block;
-				width: 20px;
-			};
-
-			span{
-				display: inline;
-
-				margin-left: 0px;
-
-				&:first-child{
-
-					margin-left: 0px;
-				};
-				
-				&:after{
-					content: ", "
-				};
-
-				&:last-child:after{
-					content: "";
-				};				
-			}
-		}
-
-
-		.block-info {
-
-			.address, .shedule{
-				padding-left: 0;
-	// outline: 1px solid red;
-
-				font-size: 15px;
-				margin-bottom: 10px;
-
-			}
-
-			.address:before{
-
-				position: relative;
-				top: 3px;
-				left: 4px;
-			}
-
-			.shedule:before{
-
-				display: inline-block;
-				position: relative;
-				top: 2px;
-				left: 2px;
-				width: 15px;
-				height: 15px;
-			}
-
-		}
-	}
-
-}
-
-
-@media (min-width:320px) and (min-height: 240px){
-
-
-
-	.block-info{
-
-		// background-color: red;
-
-		height: 150px;
+@media (min-width: 320px) and (min-height: 320px){
 		
-		justify-content: flex-end;
+	.block-offer{
 
-		.block-clinic-name{
-		
-			padding-right: 15px;	
-			text-align: right; 
-			font-size: 15px;
-
-			.clinic, .name{
-				margin-top: 3px;
-				display: block;
-			}
-		}
-
-		.phones{
-			left: auto;
-			width: auto;
-			right: 60px;
-			bottom: 30px;
-		}
-
-		.social-media{
-
-			bottom: 33px;
-		}
-
-		.shedule{
-
-			margin-right: 15px;
-		}
-
+		font-size: 25px;
+		// background-color: RED;
 	}
 
 }
 
-@media (min-width: 320px){
-
+@media (min-height: 480px){
+		
 	.block-offer{
 
 		font-size: 30px;
+		// background-color: RED;
 	}
-}
 
-@media (min-width: 320px) and (min-height: 600px){
 
 	.block-info{
 
-		height: 168px;
+		text-align: center;
+		padding-bottom: 50px;
 
-
-		
-		justify-content: center;
-
-		// background-color: red;
 
 		.block-clinic-name{
-		
-			margin-right: 0;
-			padding-right: 0;
-			margin-bottom: 5px;
-			text-align: center; 
-			padding-left: 15px;
-			padding-right: 15px;
-			font-size: 20px;
-			line-height: 25px;
 
-			.clinic, .name{
-				margin-top: 3px;
-				display: inline-block;
-			}
-		}
+				font-size: 16px;
+				// background-color: red;
+		}		
 
-		.phones{
-			padding-left: 50px;
-			padding-right: 50px;
-			position: relative;
-			margin-top: 5px;
-			left: auto;
-			right: auto;
-			bottom: auto;
-			top: auto;
-			// left: auto;
-			width: 100%;
-			flex-grow: 1;
-			order: 4;
-			font-size: 16px;
-
-			text-align: center;
-
-			line-height: 25px;
-
-			&:before{
-
-				position: relative;
-				top: 2px;
-				height: 20px;
-				display: inline-block;
-				background-position: 0 6px;
-				display: inline-block;
-				width: 20px;
-			};
+		.shedule, .address, .social-media{
 
 
-			span{
-				display: inline;
-
-				margin-left: 0px;
-
-				&:first-child{
-
-					margin-left: 0px;
-				};
-				
-				&:after{
-					content: ", ";
-					margin-right: 5px;
-				};
-
-				&:last-child:after{
-					content: "";
-				};				
-			}
-		}
-
-		.social-media{
-
-			bottom: 17px;
-		}
-
-		.shedule{
-
-			margin-right: 15px;
-		}
-
-		.address, .shedule{
-		
-			font-size: 12px;
-
-		}
-
-		.address{
-
-			&:before{
-				top: 2px;
-			}
-		}
-
-		.shedule{
-
-			&:before{
-				top: 2px;
-			}
-		}
-
-
-
-	}
-
-	
-}
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 450px) and (min-height: 600px){
-
-	.block-info{
-
-		height: 190px;
-		
-		.phones{
-			padding-left: 90px;
-			padding-right: 90px;
-		}
-
-		.social-media{
-			margin-top: 10px;
 			display: block;
-			position: static;
-		}
 
-		.shedule{
-
-			margin-right: 15px;
-		}
-
-		.address, .shedule{
-		
-			font-size: 12px;
-
-		}
-
-		.address{
-
-			&:before{
-				top: 2px;
-			}
-		}
-
-		.shedule{
-
-			&:before{
-				top: 2px;
-			}
-		}
-	}
-	
-	.block-offer{
-
-		font-size: 35px;
-		line-height: 50px;
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (min-width: 450px) and (max-height: 600px - .02px){
-
-	.block-offer{
-
-		font-size: 35px;
-	}
-
-	.block-info{
-
-
-		
-
-		height: 110px;
-
-		
-		justify-content: center;
-
-		// background-color: red;
-
-		.block-clinic-name{
-		
-			margin-right: 0;
-			padding-right: 0;
-			margin-bottom: 10px;
-			text-align: center; 
-			font-size: 20px;
-
-			.clinic, .name{
-				margin-top: 3px;
-				display: inline-block;
-			}
-		}
-
-		.phones{
-			padding-left: 50px;
-			padding-right: 50px;
-			position: relative;
-			margin-top: 5px;
-			left: auto;
-			right: auto;
-			bottom: auto;
-			top: auto;
-			// left: auto;
-			width: 100%;
-			flex-grow: 1;
-			order: 4;
-			font-size: 16px;
-
-			text-align: center;
-
-			line-height: 25px;
-
-			&:before{
-
+			.sup{
+				font-size: 70%;
 				position: relative;
-				top: 2px;
-				height: 20px;
-				display: inline-block;
-				background-position: 0 6px;
-				display: inline-block;
-				width: 20px;
-			};
-
-
-			span{
-				display: inline;
-
-				margin-left: 0px;
-
-				&:first-child{
-
-					margin-left: 0px;
-				};
-				
-				&:after{
-					content: ", ";
-					margin-right: 5px;
-				};
-
-				&:last-child:after{
-					content: "";
-				};				
+				top: -3px;
 			}
 		}
 
-		.social-media{
+		.phones{
 
-			bottom: 17px;
+			font-size: 20px;
 		}
 
-		.shedule{
-
-			margin-right: 15px;
-		}
-
-		.address, .shedule{
-		
-			font-size: 12px;
-
-		}
 
 		.address{
 
+			order: 2;
+			font-size: 10px;
+			// width: auto;
+			height: 15px;
+			padding-right: 8px;
+			position: relative;
+
+			display: inline-block;
+
+			font-weight: normal;
+			// display: 
+			// padding-left: 15px;
+
 			&:before{
-				top: 2px;
+				left: 0px;
+				top: 3px;
+				position: relative;
+				width: 15px;
+				height: 15px;		
+				background-image: url(images/geo.svg);
+				background-position: 0 50%;
+				background-size: 10px;
+				background-repeat: no-repeat;
+				content: " ";
+				display: inline-block;
+				margin-right: -2px;
 			}
+
+
 		}
 
 		.shedule{
+			// width: auto;
 
-			&:before{
-				top: 2px;
-			}
-		}
-
-	}
-}
-
-
-
-
-
-
-
-
-@media (min-width: 550px){
-
-	.block-info{
-
-
-		
-
-		height: 130px;
-
-		.phones{
-			padding-left: 10px;
+			font-size: 10px;
+			// width: auto;
+			height: 15px;
 			padding-right: 10px;
+			position: relative;
+
+			display: inline-block;
+
+			font-weight: normal;
+
+			&:before{
+				left: 0px;
+				top: 2px;
+				position: relative;
+				width: 15px;
+				height: 15px;	
+				display: inline-block;	
+				background-image: url(images/clock.svg);
+				background-position: 0 50%;
+				background-size: 13px;
+				background-repeat: no-repeat;
+				content: " ";
+
+			}
 		}
+
 
 		.social-media{
-			margin-top: 7px;
-			position: static;
-			display: block;
+
+			order: 4;	
+
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+
+			& a{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				// position: absolute;
+				background-image: url(images/vk.svg);
+				background-position: 0 50%;
+				background-size: 20px;
+				background-repeat: no-repeat;
+				// background-color: red;
+			}	
 
 		}
 	}
@@ -1100,46 +615,62 @@ $blue-color-dark: blue;
 
 
 
-@media (min-width: 550px) and (min-height: 550px) {
-	
-	.block-info{
+@include media-breakpoint-up(sm){
 
-		height: 150px;
+
+	@media (min-height: 280px){
+
+		.block-offer{
+
+			font-size: 35px;
+			// background-color: red;		
+		}
 	}
-
-}
-
-
-@media (min-width: map-get($grid-breakpoints, sm)) and (min-height: 500px){
-
-	// body{
-	// 	display: none;
-	// }
-
-	.block-offer{
-
-		font-size: 45px;	
-		line-height: 65px;
-	}	
-
-
-
 }
 
 
 
+@include media-breakpoint-up(sm){
+
+
+	@media (min-height: 360px){
+
+		.block-offer{
+
+			font-size: 45px;
+			// background-color: red;		
+		}
+	}
+}
 
 
 
-@media (min-width: map-get($grid-breakpoints, md)) and (min-height: 500px){
+@include media-breakpoint-up(md){
 
 
-	.block-offer{
+	@media (min-height: 480px){
 
-		font-size: 60px;	
-		line-height: 85px;
-	}	
+		.block-offer{
 
+			font-size: 50px;
+			// background-color: red;		
+		}
+	}
+}
+
+
+
+@include media-breakpoint-up(lg){
+
+
+	@media (min-height: 480px){
+
+		.block-offer{
+
+			font-size: 60px;
+			// background-color: red;		
+		}
+	}
 }
 
 
