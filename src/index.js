@@ -100,8 +100,10 @@ $("#popular-services-slider").slick({
         infinite: true,
         speed: 1500,
         slidesToShow: 1,
-        autoplay: true,
+        // autoplay: true,
         autoplaySpeed: 4000,
+        // variableWidth: false,
+        adaptiveHeight: false
 
 		// responsive: [{
 
