@@ -135,12 +135,17 @@ module.exports = {
 		new HtmlWebpackPlugin({
 			filename: "index.html",
 			title: 'Start App',
-			template: 'src/index.html'
+			template: 'src/index.html',
+			chunks: ['main'],
+			inject: true
+
 		}),
 		new HtmlWebpackPlugin({
-			filename: "page.html",
+			filename: "page2.html",
 			title: 'Start App',
-			template: 'src/page.html'
+			template: 'src/page.html',
+			chunks: ['page'],
+			inject: true
 		}),
 		new MiniCssExtractPlugin(),
 		new CleanWebpackPlugin(['./dist']),
