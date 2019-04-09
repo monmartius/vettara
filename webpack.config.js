@@ -10,10 +10,17 @@ const CopyWebpackPlugin= require('copy-webpack-plugin');
 
 
 module.exports = {
-	entry: { main: './src/index.js' },
+	// entry: { main: './src/index.js' },
+
+  entry: {
+    main: './src/index.js',
+    page: './src/page.js'
+   // pageThree: './srcpageThree/index.js'
+  },
+
 	output: {
 		path: path.resolve(__dirname, 'dist'),
-		filename: 'main.js',
+		filename: "[name].js",
 		publicPath: ''
 	},
 	module: {
@@ -126,8 +133,14 @@ module.exports = {
 
 	plugins: [
 		new HtmlWebpackPlugin({
+			filename: "index.html",
 			title: 'Start App',
 			template: 'src/index.html'
+		}),
+		new HtmlWebpackPlugin({
+			filename: "page.html",
+			title: 'Start App',
+			template: 'src/page.html'
 		}),
 		new MiniCssExtractPlugin(),
 		new CleanWebpackPlugin(['./dist']),

@@ -38,11 +38,6 @@ function objectToArray(object){ // {a: 1, b:2} = > [{'key': 'a', 'value': 1}, {'
 
 var $window = $(window);
 
-
-
-
-//alert($window );
-
 var	settings = {
 		'sm' : 576,
 		'md' : 768,
@@ -50,15 +45,10 @@ var	settings = {
 		'xl' : 1200
 	};
 
-// console.log(settingsArr);
-
-// breackPoints.size => '-sm', 'sm', 'md' ... 'xl'
-
 	settings = objectToArray(settings);
 
 let breakPoints = {
 
-	// scrollTop : $window.scrollTop(),
 	sizeWindow : '',
 	previousSizeWindow : undefined,
 	_previousSizeWindow : undefined,
@@ -107,21 +97,10 @@ let breakPoints = {
 
 		settings = arr;
 
-		// arr.push
-		// console.log("settings");
-		// console.log(settings);
-
-
-
 		} // if(parameters){
-		// else{
-
-		// 	settings = 
-		// }
 
 		settings.unshift({'key' : '-' + settings[0]['key'], 'value' : 1});
-		// 		console.log("settings");
-		// console.log(settings);
+
 
 		this._previousSizeWindow = this.onPoint();
 
@@ -135,24 +114,10 @@ let breakPoints = {
 		var width = $window.width(), 
 			size;				
 
-// console.log(settings);
-
-
-//window.matchMedia("screen and (min-width: 1px) and (max-width:600px)").matches
-
-
-
-
-
 		for( var i = 0 ; i < settings.length; i++){
 
-// console.log(i);
-// console.log('i=' + i);
-
-// console.log('width = ' + width );
-// console.log("settings[i]['value'] = " + settings[i]['value'] );
-
 			let size1condition = "(min-width:" + settings[i]['value'] + "px)";
+
 			let size2condition = 0;
 	
 			if(i === settings.length - 1){
@@ -165,14 +130,8 @@ let breakPoints = {
 			}
 
 			let condition = size1condition + size2condition;
-		
-
-// console.log(condition);
-// console.log(i === settings.length - 1);
 
 			if(window.matchMedia(condition).matches){
-
-// console.log('break');
 
 				break;
 			}
@@ -192,8 +151,6 @@ let breakPoints = {
 
 		if((this._previousSizeWindow !== this.sizeWindow) && (this._previousSizeWindow != undefined)){
 
-// console.log('change ' + this._previousSizeWindow + ' => ' + this.sizeWindow);
-
 			$window.trigger('breakPointChangeStart');
 
 			this.previousSizeWindow = this._previousSizeWindow;
@@ -201,35 +158,23 @@ let breakPoints = {
 
 		this._previousSizeWindow = this.sizeWindow;
 
-// console.log('change ' + this._previousSizeWindow + ' => ' + this.sizeWindow);
-		
 		return size;
 	}, // size = function(){
 
-	// onPoint : this.size
 
 
-
-		}; // vp = {
-
-		//$.vp = vp;
-
+		}; 
 
 
 $window.on('breakPointChangeStart', function(){
 
 	if (!this.breakPointChangeStartTrigger){
 
-		// $.vp.__previousSizeWindow = $.vp._previousSizeWindow;
-
 		this.breakPointChangeStartTrigger = true;
 
 		setTimeout(function(){
 
 			this.breakPointChangeStartTrigger = false;
-
-// console.log('breakPointChangeStart finished');
-			// $.vp._previousSizeWindow = $.vp.__previousSizeWindow;
 
 			$window.trigger('breakPointChange');
 
@@ -241,10 +186,6 @@ $window.on('breakPointChangeStart', function(){
 
 	}
 
-// console.log('trigger ' + this._previousSizeWindow + ' ' + this.sizeWindow);
-// console.log('$.vp.breakPointChangeStartTrigger ' + this.breakPointChangeStartTrigger);
-
-// alert('trigger ' + $.vp._previousSizeWindow + ' ' + $.vp.sizeWindow);	
 });
 
 
