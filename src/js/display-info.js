@@ -18,13 +18,6 @@ displayInfoBlock.after = "</h1>";
 
 displayInfoBlock.cssStyles = {};
 
-displayInfoBlock.setCssStyles = function(){
-
-	this.css(this.cssStyles);
-};
-
-
-
 
 $('body').append(displayInfoBlock);
 

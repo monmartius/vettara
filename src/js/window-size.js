@@ -23,6 +23,9 @@ module.exports = function(){
 		
 	}
 
-	return('width: ' + width + ' height: ' + height);
-
+	return {
+			'width' : width, 
+			'height' : height,
+			'widthHeight' : 'width: ' + width + 'px; ' + ' height: ' + height + 'px'
+	}
 }

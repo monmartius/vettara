@@ -23,6 +23,13 @@ module.exports = {
 		filename: "[name].js",
 		publicPath: ''
 	},
+
+	// optimization: {
+	// 	splitChunks: {
+	// 		chunks: 'all'
+	// 	}
+	// },
+
 	module: {
 		rules: [
 
@@ -134,15 +141,15 @@ module.exports = {
 	plugins: [
 		new HtmlWebpackPlugin({
 			filename: "index.html",
-			title: 'Start App',
+			title: 'main App',
 			template: 'src/index.html',
 			chunks: ['main'],
 			inject: true
 
 		}),
 		new HtmlWebpackPlugin({
-			filename: "page2.html",
-			title: 'Start App',
+			filename: "page.html",
+			title: 'page App',
 			template: 'src/page.html',
 			chunks: ['page'],
 			inject: true
