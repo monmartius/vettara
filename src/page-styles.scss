@@ -26,7 +26,7 @@
 
 	.overlay {
 
-	    background-color: rgba(0,60,90,.65);
+	    background-color: rgba(0,60,90,.45);
 	    position: absolute;
 	    top:0;
 	    left:0;
@@ -77,13 +77,21 @@
 
 	.block-clinic-name{
 
-		& * {
 
 			color: #fff;
 
-			display: inline-block;
-
+			font-weight: bold;
 			font-size: 15px;
+
+		
+			& *{
+				display: inline-block;
+			}
+
+		.name{
+
+			font-size: 120%;
+			display: block;
 		}
 	}
 
@@ -136,4 +144,245 @@
 			content: " ";
 		}	
 	}
+
+
+		.address{
+
+			order: 2;
+			font-size: 14px;
+			// width: auto;
+			height: 15px;
+			padding-right: 8px;
+			padding-left: 8px;
+			position: relative;
+
+			display: inline-block;
+
+			font-weight: normal;
+			// display: 
+			// padding-left: 15px;
+
+			&:before{
+				left: 0px;
+				top: 3px;
+				position: relative;
+				width: 15px;
+				height: 15px;		
+				background-image: url(images/geo.svg);
+				background-position: 0 50%;
+				background-size: 10px;
+				background-repeat: no-repeat;
+				content: " ";
+				display: inline-block;
+				margin-right: -2px;
+			}
+
+
+		}
+
+		.shedule{
+
+
+
+			.sup{
+				font-size: 70%;
+				position: relative;
+				top: -3px;
+			}			
+			// width: auto;
+
+			font-size: 14px;
+			// width: auto;
+			height: 15px;
+			padding-right: 10px;
+			position: relative;
+
+			display: inline-block;
+
+			font-weight: normal;
+
+			&:before{
+				left: 0px;
+				top: 2px;
+				position: relative;
+				width: 15px;
+				height: 15px;	
+				display: inline-block;	
+				background-image: url(images/clock.svg);
+				background-position: 0 50%;
+				background-size: 13px;
+				background-repeat: no-repeat;
+				content: " ";
+
+			}
+		}
+
+
+		.social-media{
+
+			order: 4;	
+
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			position: relative;
+			top: 5px;
+
+			& a{
+				display: inline-block;
+				width: 20px;
+				height: 20px;
+				// position: absolute;
+				background-image: url(images/vk.svg);
+				background-position: 0 50%;
+				background-size: 20px;
+				background-repeat: no-repeat;
+				// background-color: red;
+			}	
+
+		}
+
+
+	.shedule, .address, .social-media{
+
+		display: none;
+	}
+}
+
+
+
+@media  (min-width: 240px) 
+	and (max-width: 319.98px) 
+	and (min-height: 480px) {
+
+	.fullscreen-background{
+
+		height: 50vh;
+	}
+
+	.first-screen{
+
+		height: 50vh;
+	}
+}
+
+@media (min-width: 320px) 
+	and (min-height: 480px) 
+	{
+
+	.fullscreen-background{
+
+		height: 50vh;
+	}
+
+	.first-screen{
+
+		height: 50vh;
+	}
+}
+
+
+@media (max-height: 480px){
+	
+	.block-info{
+
+		
+		.block-clinic-name{
+			font-size: 22px;
+
+		}
+
+		.phones{
+
+			font-size: 120%;
+		}
+	}
+}
+
+ 
+
+
+@media (min-height: 700px){
+	
+	
+	.block-info{
+
+		
+		.block-clinic-name{
+			font-size: 22px;
+		}
+
+
+		.phones{
+
+			font-size: 140%;
+		}		
+	}
+}
+
+
+
+
+
+@include media-breakpoint-up(sm){
+	
+	.block-clinic-info{
+
+
+	}
+
+	.first-screen{
+
+	
+		.address, .shedule, .social-media{
+
+			display: inline-block;
+		}
+	}
+}
+
+
+.breadcrumbs{
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	width: 100%;
+
+	a{
+		text-decoration: none;
+		color: inherit;
+
+
+	}
+
+	.breadcrumbs-delimiter{
+
+		&:before{
+
+			content: ">";
+
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+}
+
+.content{
+
+	// padding-bottom: 0 30px 40px 30px;
+	padding-bottom: 30px;
+}
+
+h1{
+
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.lead{
+
+	// font-weight: bold;
 }

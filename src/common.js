@@ -18,9 +18,9 @@ let winSize = require('./js/window-size.js');
 
 			display.css({
 
-				'background-color': 'rgba(255, 0, 0, .2)',
+				'background-color': 'rgba(255, 0, 0, .6)',
 				'color': 'white',
-				'display': 'none'
+				// 'display': 'none'
 			});
 
 
@@ -29,6 +29,7 @@ let winSize = require('./js/window-size.js');
 				display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
 			});
 
+// alert();
 
 
 let $w = $(window);
