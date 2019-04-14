@@ -358,6 +358,11 @@ $blue-color-dark: blue;
 		color: #fff;
 	}
 
+	&>div{
+		outline: 1px solid red;
+		padding-top: 40px;
+	}
+
 	.footer-logo, 
 	.footer-info, 
 	.footer-services, 
@@ -483,7 +488,7 @@ $blue-color-dark: blue;
 
 		flex-wrap: wrap;
 
-		height: 300px;
+		height: 220px;
 
 		.footer-logo{
 
@@ -730,4 +735,52 @@ $blue-color-dark: blue;
 
 	}
 
+}
+
+
+
+
+.breadcrumbs{
+
+	padding-top: 30px;
+	padding-bottom: 30px;
+
+	width: 100%;
+
+	a{
+		text-decoration: none;
+		color: inherit;
+
+
+	}
+
+	.breadcrumbs-delimiter{
+
+		&:before{
+
+			content: ">";
+
+			padding-left: 5px;
+			padding-right: 5px;
+		}
+	}
+}
+
+.content{
+
+	// padding-bottom: 0 30px 40px 30px;
+	padding-bottom: 30px;
+}
+
+h1{
+
+	width: 100%;
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+}
+
+.lead{
+
+	// font-weight: bold;
 }
