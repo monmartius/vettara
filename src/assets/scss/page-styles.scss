@@ -137,7 +137,7 @@
 			width: 20px;
 			height: 20px;
 
-			background-image: url(images/phone.svg);
+			background-image: url(../images/phone.svg);
 			background-position: 0 50%;
 			background-size: 15px;
 			background-repeat: no-repeat;
@@ -168,7 +168,7 @@
 				position: relative;
 				width: 15px;
 				height: 15px;		
-				background-image: url(images/geo.svg);
+				background-image: url(../images/geo.svg);
 				background-position: 0 50%;
 				background-size: 10px;
 				background-repeat: no-repeat;
@@ -208,7 +208,7 @@
 				width: 15px;
 				height: 15px;	
 				display: inline-block;	
-				background-image: url(images/clock.svg);
+				background-image: url(../images/clock.svg);
 				background-position: 0 50%;
 				background-size: 13px;
 				background-repeat: no-repeat;
@@ -233,7 +233,7 @@
 				width: 20px;
 				height: 20px;
 				// position: absolute;
-				background-image: url(images/vk.svg);
+				background-image: url(../images/vk.svg);
 				background-position: 0 50%;
 				background-size: 20px;
 				background-repeat: no-repeat;
@@ -341,48 +341,3 @@
 	}
 }
 
-
-.breadcrumbs{
-
-	padding-top: 30px;
-	padding-bottom: 30px;
-
-	width: 100%;
-
-	a{
-		text-decoration: none;
-		color: inherit;
-
-
-	}
-
-	.breadcrumbs-delimiter{
-
-		&:before{
-
-			content: ">";
-
-			padding-left: 5px;
-			padding-right: 5px;
-		}
-	}
-}
-
-.content{
-
-	// padding-bottom: 0 30px 40px 30px;
-	padding-bottom: 30px;
-}
-
-h1{
-
-	width: 100%;
-	text-align: center;
-	padding-top: 20px;
-	padding-bottom: 20px;
-}
-
-.lead{
-
-	// font-weight: bold;
-}

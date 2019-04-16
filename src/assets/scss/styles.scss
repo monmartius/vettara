@@ -316,7 +316,7 @@ $blue-color-dark: blue;
 #contacts{
 
 	color: #fff;
-	background-image: url("images/green-blue-gradient.png");
+	background-image: url("../images/green-blue-gradient.png");
 	background-size: 10px 100%;
 	background-repeat: repeat no-repeat;
 
@@ -344,7 +344,7 @@ $blue-color-dark: blue;
 	  width: 100%;
 	  height: 100%;
 
-	  background: url("images/green-blue-gradient.png") 0 0 repeat-x;
+	  background: url("../images/green-blue-gradient.png") 0 0 repeat-x;
 
 	  background-size: 100% 100%;
 	  transform: rotate(180deg);
@@ -359,7 +359,7 @@ $blue-color-dark: blue;
 	}
 
 	&>div{
-		outline: 1px solid red;
+		// outline: 1px solid red;
 		padding-top: 40px;
 	}
 
@@ -749,7 +749,8 @@ $blue-color-dark: blue;
 
 	a{
 		text-decoration: none;
-		color: inherit;
+		color: $blue-color;
+		font-weight: bold;
 
 
 	}
@@ -760,8 +761,8 @@ $blue-color-dark: blue;
 
 			content: ">";
 
-			padding-left: 5px;
-			padding-right: 5px;
+			padding-left: 2px;
+			padding-right: 2px;
 		}
 	}
 }

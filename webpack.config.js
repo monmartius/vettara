@@ -6,6 +6,22 @@ const Webpack = require('webpack');
 const OptimizeCCSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const CopyWebpackPlugin= require('copy-webpack-plugin');
 
+console.log('process.env.NODE_ENV:' + process.env.NODE_ENV);
+
+const NODE_ENV = process.env.NODE_ENV;
+
+
+	NODE_ENV === 'development' ? 
+	modePath = {
+		outputPath : '',
+		publicPath: ''
+	}
+	: 
+	modePath = {
+		outputPath : './assets',
+		publicPath: './assets'		
+	};
+	
 
 
 
@@ -13,15 +29,21 @@ module.exports = {
 	// entry: { main: './src/index.js' },
 
   entry: {
-    main: './src/index.js',
-    page: './src/page.js'
+    'assets/js/main': './src/assets/js/index.js',
+    'assets/js/page': './src/assets/js/page.js'
    // pageThree: './srcpageThree/index.js'
   },
 
 	output: {
 		path: path.resolve(__dirname, 'dist'),
 		filename: "[name].js",
-		publicPath: ''
+
+		// publicPath: '/assets/'
+		// publicPath: modePath.publicPath,
+		// outputPath: modePath.outputPath
+
+
+
 	},
 
 	// optimization: {
@@ -52,6 +74,7 @@ module.exports = {
 					'sass-loader'
 				]
 			},
+			
 			{
 				test: /\.(jpg|png|svg|gif)$/,
 				use: [
@@ -59,9 +82,20 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: '[name].[ext]',
-							outputPath: './images',
+
+
+
+
+							// ========================================
+							// outputPath: './images',
+							// ========================================
+							// publicPath: modePath.publicPath,
+							// publicPath: modePath.publicPath,
+							// outputPath: modePath.outputPath,
+
 							useRelativePath: true,
-							// publicPath: './assets/images'
+							publicPath: '../images',
+							outputPath: '/assets/images'
 							// (url) => { 
 								
 							// 	console.log('>>>>>>>>> url' + url);
@@ -94,7 +128,17 @@ module.exports = {
 						loader: 'file-loader',
 						options: {
 							name: '[name].[ext]',
-							outputPath: './images',
+							// outputPath: './images',
+
+
+
+
+
+							// publicPath: modePath.publicPath,
+							// outputPath: modePath.outputPath,
+
+
+
 							useRelativePath: true
 						}
 					}
@@ -115,7 +159,15 @@ module.exports = {
 				test: /\.(eot|ttf|woff|woff2)$/,
 				loader: 'file-loader',
 				options: {
-					name: './fonts/[name].[ext]',
+					name: '../fonts/[name].[ext]',
+
+
+							// useRelativePath: true,
+							// publicPath: '/assets/images',
+							// outputPath: '/assets/images'
+
+
+
 				},
 			},
 
@@ -143,7 +195,7 @@ module.exports = {
 			filename: "index.html",
 			title: 'main App',
 			template: 'src/index.html',
-			chunks: ['main'],
+			chunks: ['assets/js/main'],
 			inject: true
 
 		}),
@@ -151,45 +203,118 @@ module.exports = {
 			filename: "page.html",
 			title: 'page App',
 			template: 'src/page.html',
-			chunks: ['page'],
+			chunks: ['assets/js/page'],
 			inject: true
 		}),
-		new MiniCssExtractPlugin(),
+
+		new MiniCssExtractPlugin({
+
+			// publicPath: modePath.publicPath,
+			// outputPath: modePath.outputPath
+
+
+			}),
+
+
 		new CleanWebpackPlugin(['./dist']),
 		new Webpack.ProvidePlugin({
 			$: 'jquery',
 			jQuery: 'jquery',
 			'window.jQuery': 'jquery'
 		}),
-		new OptimizeCCSAssetsPlugin({
-			assetNameRegExp: /\.css$/g,
-			cssProcessor: require('cssnano'),
-			cssProcessorPluginOptions: {
-				preset: ['default', {
-					discardComments: {
-						removeAll: true
-					}
-				}]
-			},
-			canPrint: true
-		}),
+		// new OptimizeCCSAssetsPlugin({
+		// 	assetNameRegExp: /\.css$/g,
+		// 	cssProcessor: require('cssnano'),
+		// 	cssProcessorPluginOptions: {
+		// 		preset: ['default', {
+		// 			discardComments: {
+		// 				removeAll: true
+		// 			}
+		// 		}]
+		// 	},
+		// 	canPrint: true
+		// }),
 
-		new CopyWebpackPlugin([{
-				from: './src/fonts',
-				to: './fonts'
+
+
+
+
+
+
+
+
+		// new CopyWebpackPlugin([
+		// 	{
+		// 		from: './src/fonts',
+		// 		to: (modePath.publicPath + '/fonts')
+		// 	},
+		// 	{
+		// 		from: './src/favicon',
+		// 		to: (modePath.publicPath + '/favicon')
+		// 	},
+		// 	{
+		// 		from: './src/images',
+		// 		to: ( modePath.publicPath + '/images')
+		// 	},
+		// 	{
+		// 		from: './src/uploads',
+		// 		to: (modePath.publicPath + '/uploads')
+		// 	}
+	 //    ])
+
+
+
+
+
+
+
+
+
+		new CopyWebpackPlugin([
+			{
+				from: './src/assets/fonts',
+				to: ('../dist/assets/fonts')
 			},
 			{
-				from: './src/favicon',
-				to: './favicon'
+				from: './src/assets/favicon',
+				to: ('../dist/assets/avicon')
 			},
 			{
-				from: './src/images',
-				to: './images'
+				from: './src/assets/images',
+				to: ( '../dist/assets/images')
 			},
 			{
-				from: './src/uploads',
-				to: './uploads'
+				from: './src/assets/uploads',
+				to: ('../dist/assets/uploads')
 			}
 	    ])
+
+
+
+
+
+
+		// new CopyWebpackPlugin([{
+		// 		from: './src/fonts',
+		// 		to: ('./fonts')
+		// 	},
+		// 	{
+		// 		from: './src/favicon',
+		// 		to: './favicon'
+		// 	},
+		// 	{
+		// 		from: './src/images',
+		// 		to: './images'
+		// 	},
+		// 	{
+		// 		from: './src/uploads',
+		// 		to: './uploads'
+		// 	}
+	 //    ])
+
+
+
+
+
 	]
 }

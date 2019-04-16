@@ -1,5 +1,5 @@
 import "./common.js";
-import './main-styles.scss';
+import '../scss/main-styles.scss';
 
 require('slick-carousel');
 require('slick-carousel/slick/slick.scss');

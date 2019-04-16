@@ -2,11 +2,11 @@ import 'bootstrap';
 import "bootstrap/scss/bootstrap.scss";
 
 
-let breakPoints = require('./js/breakpoints.js');
+let breakPoints = require('./breakpoints.js');
 // breakPoints.init();
 
-let display = require('./js/display-info.js');
-let winSize = require('./js/window-size.js');
+let display = require('./display-info.js');
+let winSize = require('./window-size.js');
 
 // function da(msg){
 
