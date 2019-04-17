@@ -159,12 +159,12 @@ module.exports = {
 				test: /\.(eot|ttf|woff|woff2)$/,
 				loader: 'file-loader',
 				options: {
-					name: '../fonts/[name].[ext]',
+					name: '[name].[ext]',
 
 
 							// useRelativePath: true,
-							// publicPath: '/assets/images',
-							// outputPath: '/assets/images'
+							publicPath: '/assets/fonts',
+							outputPath: './assets/fonts/'
 
 
 

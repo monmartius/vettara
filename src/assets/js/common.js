@@ -1,12 +1,10 @@
 import 'bootstrap'; 
-import "bootstrap/scss/bootstrap.scss";
+// import "bootstrap/scss/bootstrap.scss";
 
 
-let breakPoints = require('./breakpoints.js');
-// breakPoints.init();
-
-let display = require('./display-info.js');
-let winSize = require('./window-size.js');
+// let breakPoints = require('./breakpoints.js');
+// let display = require('./display-info.js');
+// let winSize = require('./window-size.js');
 
 // function da(msg){
 
@@ -14,20 +12,20 @@ let winSize = require('./window-size.js');
 
 // }
 
-			display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+			// display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
 
-			display.css({
+			// display.css({
 
-				'background-color': 'rgba(255, 0, 0, .6)',
-				'color': 'white',
-				// 'display': 'none'
-			});
+			// 	'background-color': 'rgba(255, 0, 0, .6)',
+			// 	'color': 'white',
+			// 	// 'display': 'none'
+			// });
 
 
-			$(window).on('resize', function(){
+			// $(window).on('resize', function(){
 
-				display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
-			});
+			// 	display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+			// });
 
 // alert();
 

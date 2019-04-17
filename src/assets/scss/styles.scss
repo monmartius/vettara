@@ -360,7 +360,7 @@ $blue-color-dark: blue;
 
 	&>div{
 		// outline: 1px solid red;
-		padding-top: 40px;
+		padding-top: 30px;
 	}
 
 	.footer-logo, 
@@ -501,6 +501,8 @@ $blue-color-dark: blue;
 
 			position: absolute;
 			top: 0;
+
+			z-index: 10;
 
 		}
 
@@ -673,6 +675,82 @@ $blue-color-dark: blue;
 			text-align: center;
 			// justify-content: center;
 			max-width: map-get($container-max-widths, lg);
+
+			&>.row{
+
+				text-align: left;
+			}
+	
+		}
+
+
+
+
+		.row>.footer-address{
+
+			text-align: left;
+			font-size: 19px;
+			width: 33%;
+			top: 125px;
+			left: 15px;
+			padding: 0;
+			margin: 0;
+		}
+
+
+		.row>.footer-social-media{
+
+			position: absolute;
+			width: auto;
+			order: 5;
+			text-align: left;
+			top: 150px;
+			left: 0px;
+
+			// float: right;
+		}
+
+
+
+		.footer-phones{
+
+
+			font-size: 30px;
+
+			div{
+
+				display: block;
+
+				&:after{
+
+					content: ", ";
+				}
+
+				&:last-child:after{
+
+					content: "";
+				}
+
+
+			}
+		}
+
+	}
+
+}
+
+
+
+@include media-breakpoint-up(xl){
+	
+	.footer{	
+
+		
+		&>div{
+
+			text-align: center;
+			// justify-content: center;
+			max-width: map-get($container-max-widths, xl);
 
 			&>.row{
 
