@@ -26,6 +26,6 @@ module.exports = function(){
 	return {
 			'width' : width, 
 			'height' : height,
-			'widthHeight' : 'width: ' + width + 'px; ' + ' height: ' + height + 'px'
+			'widthHeight' : 'width: ' + width + 'px; ' + ' height: ' + height + 'px; '
 	}
 }

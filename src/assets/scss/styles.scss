@@ -284,34 +284,6 @@ $blue-color-dark: blue;
 
 
 
-.page-container{
-
-	// text-align: center;
-
-	h2{
-
-		margin-top: 40px;
-		margin-bottom: 20px;
-
-		font-size: 30px;
-		text-align: center;
-
-		@include media-breakpoint-up(md){
-
-			margin-top: 60px;
-			margin-bottom: 30px;
-
-			font-size: 45px;
-		}	
-
-		@include media-breakpoint-up(xl){
-
-			font-size: 50px;
-		}
-	}
-}
-
-
 
 #contacts{
 
@@ -837,7 +809,7 @@ $blue-color-dark: blue;
 
 		&:before{
 
-			content: ">";
+			content: "→";
 
 			padding-left: 2px;
 			padding-right: 2px;
@@ -862,4 +834,10 @@ h1{
 .lead{
 
 	// font-weight: bold;
+}
+
+.content .container{
+
+	max-width: 720px;
+
 }

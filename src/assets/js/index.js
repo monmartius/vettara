@@ -44,6 +44,42 @@ $("#popular-services-slider").slick({
     });
 
 
+$("#testimonials-slider").slick({
+        dots: true,
+        infinite: true,
+        speed: 1500,
+        slidesToShow: 1,
+        // autoplay: true,
+        autoplaySpeed: 4000,
+        // variableWidth: false,
+        adaptiveHeight: false
+
+		// responsive: [{
+
+		// 	breakpoint: 1900,
+		// 	settings: {
+		// 		slidesToShow: 1,
+		// 		infinite: true
+		// 	}
+
+		// }, {
+
+		// 	breakpoint: 600,
+		// 	settings: {
+		// 		slidesToShow: 1,
+		// 		dots: true
+		// 	}
+
+		// }, {
+
+		// 	breakpoint: 300,
+		// 	settings: "unslick" // destroys slick
+
+		// }]        
+
+    });
+
+
 // $("#popular-services-slider").slick({
  
 //   // normal options...

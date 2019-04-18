@@ -2,30 +2,33 @@ import 'bootstrap';
 // import "bootstrap/scss/bootstrap.scss";
 
 
-// let breakPoints = require('./breakpoints.js');
-// let display = require('./display-info.js');
-// let winSize = require('./window-size.js');
+let breakPoints = require('./breakpoints.js');
+let display = require('./display-info.js');
+let winSize = require('./window-size.js');
 
-// function da(msg){
+function da(msg){
 
-// 	$('#display').html(msg);
+	$('#display').html(msg);
 
-// }
+}
 
-			// display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+			display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
 
-			// display.css({
+			display.css({
 
-			// 	'background-color': 'rgba(255, 0, 0, .6)',
-			// 	'color': 'white',
-			// 	// 'display': 'none'
-			// });
+				'background-color': 'rgba(255, 0, 0, .6)',
+				'color': 'white',
+				'right': 0,
+				'top' : 10,
+				'bottom' : 'auto'
+				// 'display': 'none'
+			});
 
 
-			// $(window).on('resize', function(){
+			$(window).on('resize', function(){
 
-			// 	display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
-			// });
+				display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+			});
 
 // alert();
 

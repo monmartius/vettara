@@ -52,7 +52,22 @@
 	       // border: 30px solid red;
 	        height: auto;
 	    }
-	}	
+	}
+
+	@media (min-width: 2065px){
+		.fullscreen-background-image{
+			width: 100%;
+		}
+		
+		img {
+
+	       width: 100%;
+	       // border: 30px solid red;
+	        height: auto;
+	        // display: none;
+	    }
+
+	}
 
 }
 
