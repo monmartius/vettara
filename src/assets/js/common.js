@@ -2,9 +2,11 @@ import 'bootstrap';
 // import "bootstrap/scss/bootstrap.scss";
 
 
-let breakPoints = require('./breakpoints.js');
+let breakpoints = require('./breakpoints.js');
 let display = require('./display-info.js');
 let winSize = require('./window-size.js');
+
+// breakPoints.init({a:100,b:500, c:600});
 
 function da(msg){
 
@@ -12,14 +14,14 @@ function da(msg){
 
 }
 
-			display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+			display.html('size: ' + breakpoints.onPoint() + '<br>'+ winSize().widthHeight);
 
 			display.css({
 
 				'background-color': 'rgba(255, 0, 0, .6)',
 				'color': 'white',
 				'right': 0,
-				'top' : 10,
+				'top' : 200,
 				'bottom' : 'auto'
 				// 'display': 'none'
 			});
@@ -27,7 +29,7 @@ function da(msg){
 
 			$(window).on('resize', function(){
 
-				display.html('size: ' + breakPoints.onPoint() + '<br>'+ winSize().widthHeight);
+				display.html('size: ' + breakpoints.onPoint() + '<br>'+ winSize().widthHeight);
 			});
 
 // alert();
@@ -87,4 +89,3 @@ $(window).on('resize scroll', function(){
 
 
 });
-

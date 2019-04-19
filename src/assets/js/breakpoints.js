@@ -1,39 +1,14 @@
+function objToArrayObjectsKeyValue(obj){
 
+	arr = [];
 
+	for (var key in obj){
 
-function decomposeObject(object){ // {a: 1} => {'key': 'a', 'value': 1}
-
-	var key, value, result = {};
-
-	for( key in object ){
-
-		result['key'] = key;
-		result['value'] = object[key];
-	}
-
-	return result;
-} // function decomposeObject(object){
-
-
-function objectToArray(object){ // {a: 1, b:2} = > [{'key': 'a', 'value': 1}, {'key': 'b', 'value': 2}]
-
-	var arr = [], item = {};
-
-	for( var key in object ){
-
-		item[key] = object[key];
-
-		item = decomposeObject(item);
-
-		arr.push(item);
-
-		item = {};
+		arr.push({ 'key' : key, 'value' : obj[key] } );
 	}
 
 	return arr;
-} // function objectToArray(object){
-
-	
+}
 
 
 var $window = $(window);
@@ -45,91 +20,111 @@ var	settings = {
 		'xl' : 1200
 	};
 
-	settings = objectToArray(settings);
+	settings = objToArrayObjectsKeyValue(settings);
 
-let breakPoints = {
+let breakpoints = {
 
-	sizeWindow : '',
-	previousSizeWindow : undefined,
-	_previousSizeWindow : undefined,
+	breakpoint : undefined,
+	previousBreakpoint : undefined,
 
 
 	init (parameters){
 
 		if(parameters){
 
-			var arr = [], i = 0, obj = {};
+			parameters = objToArrayObjectsKeyValue(parameters);
 
-			for(var sizeSymbol in parameters){
+			var temp;
 
-				obj = {};
+			for( i = 0; i < parameters.length; i++ ){
 
-				obj[sizeSymbol] = parameters[sizeSymbol];
+				for( var j = i; j < parameters.length; j++ ){
 
-				obj = decomposeObject(obj);
+					if( parameters[i]['value']  > parameters['value'] ) {
 
-				arr.push(obj);
+						var temp = parameters[i];
+						parameters[i] = parameters[j];
+						parameters[j] = temp;
+					}
 
-				i++;
-		} // if(parameters){
-
-
-
-		for( i = 0; i < arr.length; i++ ){
-
-			for( var j = i; j < arr.length; j++ ){
-
-				var objI = arr[i], keyI,
-					objJ = arr[j], keyJ;
-
-				objI = decomposeObject(arr[i]);
-				objJ = decomposeObject(arr[j]);
-
-				if( objI['value']  > objJ['value'] ) {
-
-					var temp = arr[i];
-					arr[i] = arr[j];
-					arr[j] = temp;
 				}
+			}
 
-			} // for( var j = i; j < arr.length; j++ ){
-		} // for( i = 0; i < arr.length; i++ ){
+			settings = parameters;
 
-		settings = arr;
 
-		} // if(parameters){
+		}
 
 		settings.unshift({'key' : '-' + settings[0]['key'], 'value' : 1});
 
 
-		this._previousSizeWindow = this.onPoint();
+			this.previousBreakpoint = this.onPoint();
+			this.breakpoint = this.onPoint();
 
-		return $window;
 
-	}, // init : function(parameters){
+		$window.on('resize', 
+
+			()=>{
+
+
+					this.breakpointOnResize = this.onPoint();
+
+// // console.log('this.breakpoint !== this.breakpointOnResize');
+// console.log(this.breakpoint + ' !== ' + this.breakpointOnResize);
+// console.log('this.breakpoint ' + this.breakpoint);
+// console.log('this.breakpointOnResize ' + this.breakpointOnResize);
+// console.log('');
+// console.log('');
+
+					if(this.breakpoint !== this.breakpointOnResize){
+
+						this.previousBreakpoint = this.breakpoint;
+						this.breakpoint = this.breakpointOnResize;
+
+						var eventId = 'breakpoint.changed.' + this.previousBreakpoint + '>' + this.breakpoint;
+						$window.trigger(eventId);
+
+						// console.log(eventId);
+						// console.log(eventId);
+						console.log(eventId);
+						// console.log(eventId);
+
+					}
+
+				console.log(this);
+
+			}
+		);
+
+
+
+
+
+
+
+	}, 
 
 
 	onPoint : function(){
 		
-		var width = $window.width(), 
-			size;				
+		var breakpoint;				
 
 		for( var i = 0 ; i < settings.length; i++){
 
-			let size1condition = "(min-width:" + settings[i]['value'] + "px)";
+			let breakpoint1condition = "(min-width:" + settings[i]['value'] + "px)";
 
-			let size2condition = 0;
+			let breakpointcondition = 0;
 	
 			if(i === settings.length - 1){
 			
-				size2condition = "";
-				// " and (max-width:" + size2 + "px)"
+				breakpoint2condition = "";
+
 			}
 			else{
-				size2condition = " and (max-width:" + (settings[i+1]['value'] - 1) + "px)"
+				breakpoint2condition = " and (max-width:" + (settings[i+1]['value'] - 1) + "px)"
 			}
 
-			let condition = size1condition + size2condition;
+			let condition = breakpoint1condition + breakpoint2condition;
 
 			if(window.matchMedia(condition).matches){
 
@@ -139,65 +134,27 @@ let breakPoints = {
 
 		if( i <= 0 ){
 
-			size = settings[0]['key'];
+			breakpoint = settings[0]['key'];
 		}
 		else{
 
-			size = settings[i]['key'];
+			breakpoint = settings[i]['key'];
 		}
 
 
-		this.sizeWindow = size;
 
-		if((this._previousSizeWindow !== this.sizeWindow) && (this._previousSizeWindow != undefined)){
 
-			$window.trigger('breakPointChangeStart');
-
-			this.previousSizeWindow = this._previousSizeWindow;
-		}
-
-		this._previousSizeWindow = this.sizeWindow;
-
-		return size;
-	}, // size = function(){
+		return breakpoint;
+	}, 
 
 
 
-		}; 
-
-
-$window.on('breakPointChangeStart', function(){
-
-	if (!this.breakPointChangeStartTrigger){
-
-		this.breakPointChangeStartTrigger = true;
-
-		setTimeout(function(){
-
-			this.breakPointChangeStartTrigger = false;
-
-			$window.trigger('breakPointChange');
-
-			
-		}, 1000);
-	}
-	else{
-
-
-	}
-
-});
+}; 
 
 
 
+breakpoints.init();
 
 
-$window.on('resize', function(){
-	breakPoints.onPoint()
-});
+module.exports = breakpoints;
 
-
-breakPoints.init();
-
-
-module.exports = breakPoints;
