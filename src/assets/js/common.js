@@ -21,7 +21,7 @@ function da(msg){
 				'background-color': 'rgba(255, 0, 0, .6)',
 				'color': 'white',
 				'right': 0,
-				'top' : 200,
+				'top' : 30,
 				'bottom' : 'auto'
 				// 'display': 'none'
 			});
