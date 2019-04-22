@@ -82,7 +82,8 @@ let breakpoints = {
 						this.breakpoint = this.breakpointOnResize;
 
 						var eventId = 'breakpoint.changed.' + this.previousBreakpoint + '>' + this.breakpoint;
-						$window.trigger(eventId);
+						$window.trigger('breakpoint.changed');
+						// $window.trigger(eventId);
 
 						// console.log(eventId);
 						// console.log(eventId);
@@ -91,7 +92,7 @@ let breakpoints = {
 
 					}
 
-				console.log(this);
+				// console.log(this);
 
 			}
 		);
@@ -147,8 +148,48 @@ let breakpoints = {
 		return breakpoint;
 	}, 
 
+	breakpointPx(breakpointKey){
 
+		for( breakpoint in settings)
 
+			if(settings[breakpoint].key === breakpointKey){
+
+				return settings[breakpoint].value;
+			}
+		
+	},
+
+	winnowSizePx(){
+
+		let width = 1;
+		let height = 1;
+
+		for(width = 10000; width > 1; width--){
+
+			if(window.matchMedia('(min-width:' + width + 'px)').matches){
+
+				break;
+			}
+
+			
+		}
+
+		for(height = 10000; height >1; height--){
+
+			if(window.matchMedia('(min-height:' + height + 'px)').matches){
+
+				break;
+			}
+
+			
+		}
+
+		return {
+				'width' : width, 
+				'height' : height,
+				'widthHeight' : 'width: ' + width + 'px; ' + ' height: ' + height + 'px; '
+		}
+	}
 }; 
 
 
