@@ -9,10 +9,15 @@ require('slick-carousel/slick/slick-theme.scss');
 
 let breakpoints = require('./breakpoints.js');
 
+
 // alert(breakpoints.onPoint());
 
 
-if(breakpoints.onPoint() !== '-sm'){
+let testimonialsSliderSlidesToShow = 1;
+let onPoint = breakpoints.onPoint();
+
+	
+if(onPoint !== '-sm'){
 
 
 	$("#popular-services-slider").slick({
@@ -30,25 +35,45 @@ if(breakpoints.onPoint() !== '-sm'){
 
 
 
+	switch(onPoint) {
+	  case 'sm':
+	    
+	    testimonialsSliderSlidesToShow = 1;
+	    
+	    break
+	    
+	  case 'md':
+	    
+	    testimonialsSliderSlidesToShow = 2;
+
+	    break
+
+	  case 'lg':
+	  case 'xl':
+
+	    testimonialsSliderSlidesToShow = 2;
+
+	    break
+	}
+
 	$("#testimonials-slider").slick({
 		dots: true,
 		infinite: true,
 		speed: 1500,
-		slidesToShow: 1,
+		slidesToShow: testimonialsSliderSlidesToShow,
 		// autoplay: true,
 		autoplaySpeed: 4000,
 		// variableWidth: false,
 		adaptiveHeight: false
 
-
 	});
+
 
 }
 else{
 
 	// alert(breakpoints.onPoint());
 }
-
 
 
 
@@ -70,21 +95,67 @@ $(window).on('breakpoint.changed',
 		        // variableWidth: false,
 		        adaptiveHeight: false
 		    });
-
-			$("#testimonials-slider").slick({
-				dots: true,
-				infinite: true,
-				speed: 1500,
-				slidesToShow: 1,
-				// autoplay: true,
-				autoplaySpeed: 4000,
-				// variableWidth: false,
-				adaptiveHeight: false
-
-
-			});
-		
 		}
+
+
+		switch(breakpoints.breakpoint) {
+		  case 'sm':
+		    
+		    testimonialsSliderSlidesToShow = 1;
+
+
+		    
+		    break
+		    
+		  case 'md':
+		    
+		    testimonialsSliderSlidesToShow = 2;
+
+		    break
+
+		  case 'lg':
+		  case 'xl':
+
+		    testimonialsSliderSlidesToShow = 2;
+
+		    break
+		}
+
+
+		if(breakpoints.previousBreakpoint !== '-sm'){
+
+			$("#testimonials-slider").slick('unslick');
+		}
+
+
+
+		$("#testimonials-slider").slick({
+			dots: true,
+			infinite: true,
+			speed: 1500,
+			slidesToShow: testimonialsSliderSlidesToShow,
+			// autoplay: true,
+			autoplaySpeed: 4000,
+			// variableWidth: false,
+			adaptiveHeight: false
+
+		});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 		
 		if(breakpoints.breakpoint === '-sm'){
@@ -99,6 +170,12 @@ $(window).on('breakpoint.changed',
 
 
 	}
+
+
+
+
+
+
 
 
 

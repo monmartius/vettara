@@ -20,8 +20,11 @@ function da(msg){
 
 				'background-color': 'rgba(255, 0, 0, .6)',
 				'color': 'white',
-				'right': 0,
+				'right': '20px',
+				'width' : '80px',
 				'bottom' : 30,
+				'font-size' : '12px',
+
 				// 'bottom' : 'auto'
 				// 'display': 'none'
 			});
