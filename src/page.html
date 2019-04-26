@@ -150,13 +150,484 @@
 				
 				<div class="row">
 					
-					<div class="breadcrumbs">
-						<a href="/">Главная</a>
-						<span class="breadcrumbs-delimiter"></span>
-						<a href="/">Раздел</a>
-					</div>
 
 <article>
+
+
+
+
+          <h1 class="bd-title" id="content">Типографика</h1>
+          <p class="bd-lead">Документация и примеры типографии Bootstrap, включая глобальные настройки, заголовки, текст документа, списки и т.д.</p>
+
+<script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- 320x100 -->
+<ins class="adsbygoogle" style="display:inline-block;width:320px;height:100px" data-ad-client="ca-pub-8588635311388465" data-ad-slot="4356105656"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+          <h2 id="global-settings"><div>Глобальные настройки<a class="anchorjs-link " href="#global-settings" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Bootstrap предустанавливает глобальные стили отображения, типографии и ссылок. Когда нужно настроить больше элементов, проверьте наши <a href="/docs/4.1/utilities/text/">классы текстовых утилит</a>.</p>
+
+<ul>
+  <li>Используйте <a href="/docs/4.1/content/reboot/#native-font-stack">набор встроенных шрифтов</a>, который выберет лучшее семейство шрифтов <code class="highlighter-rouge">font-family</code> для всех ОС и девайсов.</li>
+  <li>Для более широкой и доступной шкалы шрифтов BS4 использует шрифт браузера по умолчанию <code class="highlighter-rouge">font-size</code> (обычно 16px), так что юзеры могут сами настроить шрифты через настройки шрифтов браузера.</li>
+  <li>Используйте атрибуты <code class="highlighter-rouge">$font-family-base</code>, <code class="highlighter-rouge">$font-size-base</code> и <code class="highlighter-rouge">$line-height-base</code> как типографическую базу для <code class="highlighter-rouge">&lt;body&gt;</code>.</li>
+  <li>Задавайте глобальные цвета ссылок через <code class="highlighter-rouge">$link-color</code> и применяйте подчеркивание ссылок только в <code class="highlighter-rouge">:hover</code>.</li>
+  <li>Используйте <code class="highlighter-rouge">$body-bg</code> для задания <code class="highlighter-rouge">background-color</code> для <code class="highlighter-rouge">&lt;body&gt;</code> (по умолчанию стоит <code class="highlighter-rouge">#fff</code>).</li>
+</ul>
+
+<p>Эти стили находятся в <code class="highlighter-rouge">_reboot.scss</code>, а глобальные переменные определены в <code class="highlighter-rouge">_variables.scss</code>. Задавайте <code class="highlighter-rouge">$font-size-base</code> в <code class="highlighter-rouge">rem</code>.</p>
+
+<h2 id="headings"><div>Заголовки<a class="anchorjs-link " href="#headings" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Все HTML-заголовки (<code class="highlighter-rouge">&lt;h1&gt;</code>-<code class="highlighter-rouge">&lt;h6&gt;</code>) доступны в BS4.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Заголовок</th>
+      <th>Пример</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h1&gt;&lt;/h1&gt;</code></p>
+
+      </td>
+      <td><span class="h1">h1. Заголовок bootstrap </span></td>
+    </tr>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h2&gt;&lt;/h2&gt;</code></p>
+
+      </td>
+      <td><span class="h2">h2. Заголовок bootstrap </span></td>
+    </tr>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h3&gt;&lt;/h3&gt;</code></p>
+
+      </td>
+      <td><span class="h3">h3. Заголовок bootstrap </span></td>
+    </tr>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h4&gt;&lt;/h4&gt;</code></p>
+
+      </td>
+      <td><span class="h4">h4. Заголовок bootstrap </span></td>
+    </tr>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h5&gt;&lt;/h5&gt;</code></p>
+
+      </td>
+      <td><span class="h5">h5. Заголовок bootstrap </span></td>
+    </tr>
+    <tr>
+      <td>
+        <p><code class="highlighter-rouge">&lt;h6&gt;&lt;/h6&gt;</code></p>
+
+      </td>
+      <td><span class="h6">h6. Заголовок bootstrap </span></td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1&gt;</span>h1. Заголовок bootstrap <span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h2&gt;</span>h2. Заголовок bootstrap <span class="nt">&lt;/h2&gt;</span>
+<span class="nt">&lt;h3&gt;</span>h3. Заголовок bootstrap <span class="nt">&lt;/h3&gt;</span>
+<span class="nt">&lt;h4&gt;</span>h4. Заголовок bootstrap <span class="nt">&lt;/h4&gt;</span>
+<span class="nt">&lt;h5&gt;</span>h5. Заголовок bootstrap <span class="nt">&lt;/h5&gt;</span>
+<span class="nt">&lt;h6&gt;</span>h6. Заголовок bootstrap <span class="nt">&lt;/h6&gt;</span></code></pre></figure>
+
+<p>Если вы хотите, чтобы стилизация шрифта совпадала с заголовком, но не можете использовать соотнесенный HTML-элемент, классы <code class="highlighter-rouge">.h1</code> - <code class="highlighter-rouge">.h6</code> также доступны.</p>
+
+<div class="bd-example">
+<p class="h1">h1. Заголовок bootstrap </p>
+<p class="h2">h2. Заголовок bootstrap </p>
+<p class="h3">h3. Заголовок bootstrap </p>
+<p class="h4">h4. Заголовок bootstrap </p>
+<p class="h5">h5. Заголовок bootstrap </p>
+<p class="h6">h6. Заголовок bootstrap </p>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h1"</span><span class="nt">&gt;</span>h1. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h2"</span><span class="nt">&gt;</span>h2. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h3"</span><span class="nt">&gt;</span>h3. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h4"</span><span class="nt">&gt;</span>h4. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h5"</span><span class="nt">&gt;</span>h5. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"h6"</span><span class="nt">&gt;</span>h6. Заголовок bootstrap <span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h3 id="customizing-headings"><div>Настройка заголовков<a class="anchorjs-link " href="#customizing-headings" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Используйте имеющиеся общие классы для воссоздания маленького вторичного текста-подзаголовка из <a href="/docs/3.3.7/">Bootstrap 3</a>.</p>
+
+<div class="bd-example">
+  <span class="h3">
+    Заголовок отображения
+    <small class="text-muted">С выцветшим вторичным текстом</small>
+  </span>
+</div>
+
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h3&gt;</span>
+  Заголовок отображения
+  <span class="nt">&lt;small</span> <span class="na">class=</span><span class="s">"text-muted"</span><span class="nt">&gt;</span>С выцветшим вторичным текстом<span class="nt">&lt;/small&gt;</span>
+<span class="nt">&lt;/h3&gt;</span></code></pre></figure>
+
+<h2 id="display-headings"><div>«Заголовок дисплея»<a class="anchorjs-link " href="#display-headings" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Традиционные заголовки созданы для «работы» «в глубине» вашей страницы. Если вам необходимо выделить заголовок, используйте <strong>«заголовок дисплея»</strong> - большего размера, слегка более вычурный.</p>
+
+<div class="bd-example bd-example-type">
+  <table class="table">
+    <tbody>
+      <tr>
+        <td><span class="display-1">Display 1</span></td>
+      </tr>
+      <tr>
+      <td><span class="display-2">Display 2</span></td>
+      </tr>
+      <tr>
+      <td><span class="display-3">Display 3</span></td>
+      </tr>
+      <tr>
+      <td><span class="display-4">Display 4</span></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-1"</span><span class="nt">&gt;</span>Display 1<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-2"</span><span class="nt">&gt;</span>Display 2<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-3"</span><span class="nt">&gt;</span>Display 3<span class="nt">&lt;/h1&gt;</span>
+<span class="nt">&lt;h1</span> <span class="na">class=</span><span class="s">"display-4"</span><span class="nt">&gt;</span>Display 4<span class="nt">&lt;/h1&gt;</span></code></pre></figure>
+
+<h2 id="lead"><div>«Лид»<a class="anchorjs-link " href="#lead" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Создайте выделяющийся, отстоящий от основной массы параграф добавлением класса <code class="highlighter-rouge">.lead</code>.</p>
+
+<div class="bd-example">
+<p class="lead">
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+</p>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"lead"</span><span class="nt">&gt;</span>
+  Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+<span class="nt">&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="inline-text-elements"><div>Блочные текстовые элементы<a class="anchorjs-link " href="#inline-text-elements" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Стили для обычных блочных элементов HTML5.</p>
+
+<div class="bd-example">
+<p>Тэг-выделитель для <mark>подсветки</mark> текста.</p>
+<p><del>Удаленный текст.</del></p>
+<p><s>Зачеркнутый.</s></p>
+<p><ins>Строка - дополнение к документу.</ins></p>
+<p><u>Подчеркнутая</u></p>
+<p><small>Мелкий шрифт (типа нижний индекс).</small></p>
+<p><strong>Жирный текст.</strong></p>
+<p><em>Курсив.</em></p>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;</span>Тэг-выделитель для <span class="nt">&lt;mark&gt;</span>подсветки<span class="nt">&lt;/mark&gt;</span> текста.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;del&gt;</span>Удаленный текст.<span class="nt">&lt;/del&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;s&gt;</span>Зачеркнутый.<span class="nt">&lt;/s&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;ins&gt;</span>Строка - дополнение к документу.<span class="nt">&lt;/ins&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;u&gt;</span>Подчеркнутая<span class="nt">&lt;/u&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;small&gt;</span>Мелкий шрифт (типа нижний индекс).<span class="nt">&lt;/small&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;strong&gt;</span>Жирный текст.<span class="nt">&lt;/strong&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;em&gt;</span>Курсив.<span class="nt">&lt;/em&gt;&lt;/p&gt;</span></code></pre></div>
+
+<p>Классы <code class="highlighter-rouge">.mark</code> и <code class="highlighter-rouge">.small</code> дают стили, одинаковые с тэгами <code class="highlighter-rouge">&lt;mark&gt;</code> и <code class="highlighter-rouge">&lt;small&gt;</code>, но помогают избежать нежелательных семантических последствий, которые могут возникнуть  с тэгами.</p>
+
+<p>Также, свободно пользуйтесь тэгами <code class="highlighter-rouge">&lt;b&gt;</code> и <code class="highlighter-rouge">&lt;i&gt;</code> в HTML5. <code class="highlighter-rouge">&lt;b&gt;</code> создан для выделения слов или фраз, когда выделение не придает словам дополнительной важности, а <code class="highlighter-rouge">&lt;i&gt;</code> выделяет цитаты, прямую речь, термины и т.д.</p>
+
+<h2 id="text-utilities"><div>Классы текстовых утилит<a class="anchorjs-link " href="#text-utilities" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Изменяйте выравнивание текста, стиль, «жирность» и цвет с помощью <a href="/docs/4.1/utilities/text/">текстовых утилит</a> и <a href="/docs/4.1/utilities/colors/">утилит цвета</a>.</p>
+
+
+<h2 id="abbreviations"><div>Сокращения<a class="anchorjs-link " href="#abbreviations" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Реализация элемента <code class="highlighter-rouge">&lt;abbr&gt;</code> нужна для показа полной версии акронимов и сокращений по наведению. Этот тег имеет подчеркивание по умолчанию и показывает “help-cursor” для дополнительного контекста, а также для помощи юзерам-инвалидам.</p>
+
+<p>Добавьте класс <code class="highlighter-rouge">.initialism</code> к сокращению для создания слегка уменьшенного шрифта.</p>
+
+<div class="bd-example">
+<p><abbr title="attribute">attr</abbr></p>
+<p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr></p>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"attribute"</span><span class="nt">&gt;</span>attr<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span>
+<span class="nt">&lt;p&gt;&lt;abbr</span> <span class="na">title=</span><span class="s">"HyperText Markup Language"</span> <span class="na">class=</span><span class="s">"initialism"</span><span class="nt">&gt;</span>HTML<span class="nt">&lt;/abbr&gt;&lt;/p&gt;</span></code></pre></div>
+
+<h2 id="blockquotes"><div>Цитаты<a class="anchorjs-link " href="#blockquotes" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Для цитат с другого источника в вашем документе. Оберните любой элемент в <code class="highlighter-rouge">&lt;blockquote class="blockquote"&gt;</code> для создания цитаты.</p>
+
+<div class="bd-example">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+</blockquote>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<h3 id="naming-a-source"><div>Наименование источника<a class="anchorjs-link " href="#naming-a-source" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Добавьте <code class="highlighter-rouge">&lt;footer class="blockquote-footer"&gt;</code> для идентификации источника. Оберните имя источника в <code class="highlighter-rouge">&lt;cite&gt;</code>.</p>
+
+<div class="bd-example">
+<blockquote class="blockquote">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Кто-то знаменитый в <cite title="Source Title">Название источника</cite></footer>
+</blockquote>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Кто-то знаменитый в <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Название источника"</span><span class="nt">&gt;</span>Source Title<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<h3 id="alignment"><div>Выравнивание<a class="anchorjs-link " href="#alignment" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Используйте текстовые утилиты, если необходимо изменить выравнивание блока цитат.</p>
+
+<div class="bd-example">
+<blockquote class="blockquote text-center">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Кто-то знаменитый в <cite title="Source Title">Название источника</cite></footer>
+</blockquote>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-center"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Кто-то знаменитый в <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Название источника"</span><span class="nt">&gt;</span>Название источника<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<div class="bd-example">
+<blockquote class="blockquote text-right">
+  <p class="mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+  <footer class="blockquote-footer">Кто-то знаменитый в <cite title="Source Title">Название источника</cite></footer>
+</blockquote>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;blockquote</span> <span class="na">class=</span><span class="s">"blockquote text-right"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"mb-0"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;footer</span> <span class="na">class=</span><span class="s">"blockquote-footer"</span><span class="nt">&gt;</span>Кто-то знаменитый в <span class="nt">&lt;cite</span> <span class="na">title=</span><span class="s">"Название источника"</span><span class="nt">&gt;</span>Название источника<span class="nt">&lt;/cite&gt;&lt;/footer&gt;</span>
+<span class="nt">&lt;/blockquote&gt;</span></code></pre></div>
+
+<h2 id="lists"><div>Списки<a class="anchorjs-link " href="#lists" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<h3 id="unstyled"><div>Без элементов стилизации<a class="anchorjs-link " href="#unstyled" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Удаляет свойство по умолчанию <code class="highlighter-rouge">list-style</code> и левый марджин элементов списка (только прямые  «потомки»). <strong>Это работает лишь для прямых «потомков»</strong>, т.е. вам необходимо будет добавлять класс для каждого из вложенных списков.</p>
+
+<div class="bd-example">
+<ul class="list-unstyled">
+  <li>Lorem ipsum dolor sit amet</li>
+  <li>Consectetur adipiscing elit</li>
+  <li>Integer molestie lorem at massa</li>
+  <li>Facilisis in pretium nisl aliquet</li>
+  <li>Nulla volutpat aliquam velit
+    <ul>
+      <li>Phasellus iaculis neque</li>
+      <li>Purus sodales ultricies</li>
+      <li>Vestibulum laoreet porttitor sem</li>
+      <li>Ac tristique libero volutpat at</li>
+    </ul>
+  </li>
+  <li>Faucibus porta lacus fringilla vel</li>
+  <li>Aenean sit amet erat nunc</li>
+  <li>Eget porttitor lorem</li>
+</ul>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Consectetur adipiscing elit<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Integer molestie lorem at massa<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Facilisis in pretium nisl aliquet<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Nulla volutpat aliquam velit
+    <span class="nt">&lt;ul&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Phasellus iaculis neque<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Purus sodales ultricies<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Vestibulum laoreet porttitor sem<span class="nt">&lt;/li&gt;</span>
+      <span class="nt">&lt;li&gt;</span>Ac tristique libero volutpat at<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;/ul&gt;</span>
+  <span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Faucibus porta lacus fringilla vel<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Aenean sit amet erat nunc<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;</span>Eget porttitor lorem<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h3 id="inline"><div>Блочные<a class="anchorjs-link " href="#inline" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Удаляет у элементов списка значок слева и создает небольшой отступ <code class="highlighter-rouge">margin</code> с помощью сочетания классов <code class="highlighter-rouge">.list-inline</code> и <code class="highlighter-rouge">.list-inline-item</code>.</p>
+
+<div class="bd-example">
+<ul class="list-inline">
+  <li class="list-inline-item">Lorem ipsum</li>
+  <li class="list-inline-item">Phasellus iaculis</li>
+  <li class="list-inline-item">Nulla volutpat</li>
+</ul>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Phasellus iaculis<span class="nt">&lt;/li&gt;</span>
+  <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"list-inline-item"</span><span class="nt">&gt;</span>Nulla volutpat<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></code></pre></div>
+
+<h3 id="description-list-alignment"><div>Описание и выравнивание<a class="anchorjs-link " href="#description-list-alignment" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h3>
+
+<p>Выравнивайте термины и описания по горизонтали, используя предустановленные классы сеточной системы BS4 (или семантические миксины). Для более длинных терминов вы можете добавить класс <code class="highlighter-rouge">.text-truncate</code> чтобы «усечь» текст эллипсом.</p>
+
+<div class="bd-example">
+<dl class="row">
+  <dt class="col-sm-3">Списки описания</dt>
+  <dd class="col-sm-9">A description list is perfect for defining terms.</dd>
+
+  <dt class="col-sm-3">Euismod</dt>
+  <dd class="col-sm-9">
+    <p>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</p>
+    <p>Donec id elit non mi porta gravida at eget metus.</p>
+  </dd>
+
+  <dt class="col-sm-3">Malesuada porta</dt>
+  <dd class="col-sm-9">Etiam porta sem malesuada magna mollis euismod.</dd>
+
+  <dt class="col-sm-3 text-truncate">Truncated term is truncated</dt>
+  <dd class="col-sm-9">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+
+  <dt class="col-sm-3">Вложенность</dt>
+  <dd class="col-sm-9">
+    <dl class="row">
+      <dt class="col-sm-4">Список вложенных определений</dt>
+      <dd class="col-sm-8">Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.</dd>
+    </dl>
+  </dd>
+</dl>
+</div>
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><div class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Description lists<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>A description list is perfect for defining terms.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Euismod<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.<span class="nt">&lt;/p&gt;</span>
+    <span class="nt">&lt;p&gt;</span>Donec id elit non mi porta gravida at eget metus.<span class="nt">&lt;/p&gt;</span>
+  <span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Malesuada porta<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>Etiam porta sem malesuada magna mollis euismod.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3 text-truncate"</span><span class="nt">&gt;</span>Truncated term is truncated<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.<span class="nt">&lt;/dd&gt;</span>
+
+  <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-3"</span><span class="nt">&gt;</span>Nesting<span class="nt">&lt;/dt&gt;</span>
+  <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-9"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;dl</span> <span class="na">class=</span><span class="s">"row"</span><span class="nt">&gt;</span>
+      <span class="nt">&lt;dt</span> <span class="na">class=</span><span class="s">"col-sm-4"</span><span class="nt">&gt;</span>Nested definition list<span class="nt">&lt;/dt&gt;</span>
+      <span class="nt">&lt;dd</span> <span class="na">class=</span><span class="s">"col-sm-8"</span><span class="nt">&gt;</span>Aenean posuere, tortor sed cursus feugiat, nunc augue blandit nunc.<span class="nt">&lt;/dd&gt;</span>
+    <span class="nt">&lt;/dl&gt;</span>
+  <span class="nt">&lt;/dd&gt;</span>
+<span class="nt">&lt;/dl&gt;</span></code></pre></div>
+
+<h2 id="responsive-typography"><div>Отзывчивая «типографика»<a class="anchorjs-link " href="#responsive-typography" aria-label="Anchor" data-anchorjs-icon="#" style="padding-left: 0.375em;"></a></div></h2>
+
+<p>Этот термин означает масштабирование текста и компонентов простой регулировкой коренного элемента <code class="highlighter-rouge">font-size</code> в медиа-запросах. Bootstrap не делает этого по умолчанию, но вы можете легко сделать это сами.</p>
+
+<p>Вот пример. Выбирайте какие угодно <code class="highlighter-rouge">font-size</code> и медиа-запросы.</p>
+
+<div class="bd-clipboard"><button class="btn-clipboard" title="" data-original-title="Скопировать в буфер обмена">Копировать</button></div><figure class="highlight"><pre><code class="language-scss" data-lang="scss"><span class="nt">html</span> <span class="p">{</span>
+  <span class="nl">font-size</span><span class="p">:</span> <span class="m">1rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">sm</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.2rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">md</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.4rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="k">@include</span> <span class="nd">media-breakpoint-up</span><span class="p">(</span><span class="n">lg</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nt">html</span> <span class="p">{</span>
+    <span class="nl">font-size</span><span class="p">:</span> <span class="m">1</span><span class="mi">.6rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span></code></pre></figure>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<h2>Все HTML заголовки, <h1> через <h6>, доступны.</h2>
+<h1>h1. Bootstrap heading</h1>
+<h2>h2. Bootstrap heading</h2>
+<h3>h3. Bootstrap heading</h3>
+<h4>h4. Bootstrap heading</h4>
+<h5>h5. Bootstrap heading</h5>
+<h6>h6. Bootstrap heading</h6>
+
+
+
+<p>.h1 через .h6 классы, также доступны, когда вы хотите, чтобы соответствовать шрифт заголовка, но не могут использовать соответствующий HTML-элемент. </p>
+
+
+<p class="h1">h1. Bootstrap heading</p>
+<p class="h2">h2. Bootstrap heading</p>
+<p class="h3">h3. Bootstrap heading</p>
+<p class="h4">h4. Bootstrap heading</p>
+<p class="h5">h5. Bootstrap heading</p>
+<p class="h6">h6. Bootstrap heading</p>
+
+
+	
+<textarea style = "width: 100%; height: auto;">
+	<p class="h1">h1. Bootstrap heading</p>
+	<p class="h2">h2. Bootstrap heading</p>
+	<p class="h3">h3. Bootstrap heading</p>
+	<p class="h4">h4. Bootstrap heading</p>
+	<p class="h5">h5. Bootstrap heading</p>
+	<p class="h6">h6. Bootstrap heading</p>
+</textarea>
+
+
+
+
+
+<h1 class="service">Настройка заголовков</h1>
+
+<p>С помощью входящих в комплект служебные классы, чтобы воссоздать маленький вторичный текст от Bootstrap 3. 
+</p>
+
+<h3>
+  Fancy display heading
+  <small class="text-muted">With faded secondary text</small>
+</h3>
+
+
 
 <h1>Зачем нужно прививать домашних животных, и так ли это обязательно?</h1>
 
